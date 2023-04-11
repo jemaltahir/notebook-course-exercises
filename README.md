@@ -39,6 +39,9 @@ The `-v` flag is used in Docker commands to specify a volume, which allows for d
     * Go to the Application Console from the top left corner menu and select your project where you have deployed your JupyterHub service.
     * Now you can follow the status of your JupyterHub deployment.
     * Once everything is running, You can go to Applications > Services from the menu on the left-hand side and select the jupyterhub service, follow the link, and log in to your JupyterHub service.
+    * Login as admin and create a user `user1`and authorize it `https://.........rahtiapp.fi/hub/authorize`
+    * Create in a signup page a user `user1` and password `user1` 
+    * Create a python script `print("user1")` and check if you can access from admin control pannel.
 
   
   
