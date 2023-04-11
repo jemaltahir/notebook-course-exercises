@@ -24,10 +24,24 @@ This exercise aims to introduce you to Rahti Cloud containers using notebooks. W
    To save the created python script we have to mount volume local host to container.
   Using the following command `sudo docker run -it --rm -p 8888:8888 --user root  -e NB_UID=$(id -u) -e NB_GID=$(id -g) -e CHOWN_HOME=yes -e CHOWN_HOME_OPTS='-R' -v "${PWD}":/home/jovyan/work jupyter/minimal-notebook`
 The `-v` flag is used in Docker commands to specify a volume, which allows for data to be shared between the host system and a container. The `${PWD}` part of the command is a shell variable that represents the current working directory (PWD stands for "present working directory"). And `/home/jovyan/work` is the path inside the container where the volume will be mounted.
+
+1. Kill the container and check if the files exists
+  
+   Rerun the previous command and check if the files has been stored.
   
 
 
-   
+## Exercise 2: Deploying JupyterHub as a Service.
+    * From the application catalog select JupyterHub(Native Authentication).
+    * Brief information about the template will be displayed. Click Next.
+    * Configure your deployment. E.g., select a project where you want to deploy the JupyterHub service and set an admin user(admin), password(adminpass) and database password(adminpass) for it.
+    * Finally, you can Create your JupyterHub service.
+    * Go to the Application Console from the top left corner menu and select your project where you have deployed your JupyterHub service.
+    * Now you can follow the status of your JupyterHub deployment.
+    * Once everything is running, You can go to Applications > Services from the menu on the left-hand side and select the jupyterhub service, follow the link, and log in to your JupyterHub service.
+
+  
+  
 
 
   
